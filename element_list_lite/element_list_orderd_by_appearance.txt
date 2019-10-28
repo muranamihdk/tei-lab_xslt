@@ -1,0 +1,573 @@
+header : teiHeader	全てのTEI準拠テキストが伴う，電子版のタイトルページを構成する，記述的・宣言的情報を示す．
+header : fileDesc	電子ファイルに関する完全な書誌情報を示す．
+header : titleStmt	作品や知的内容に責任のあるもののタイトルに関する情報をまとめる．
+header : sponsor	支援を行う組織や団体の名前を示す．
+header : funder	テキストやプロジェクトの資金提供に責任を持つ個人，団体，組織の名前を示す．
+header : principal	電子テキストの生成に責任のある中心的な研究者の名前を示す．
+header : editionStmt	版に関する情報をまとめる．
+header : edition	テキストの版の詳細を示す．
+header : extent	電子・非電子テキストのおよその大きさを任意の単位で示す．
+header : publicationStmt	電子テキストなどの出版や頒布に関する情報をまとめる．
+header : distributor	テキストの頒布に責任を持つ人物または団体の名前を示す．
+header : authority	電子データの作成に責任のある個人または団体の名前を示す．出版者や頒布者ではない．
+header : idno	書誌項目を特定する標準的・非標準的数値を示す．
+header : availability	テキストの利用可能性に関する情報を示す．例えば，その使用や頒布，著作権に関する制限など．
+header : licence	contains information about a licence or other legal agreement applicable to the text.
+header : seriesStmt	出版されたシリーズの情報をまとめる．
+header : notesStmt	当該書誌情報の他の場所に記録されているテキストに関する注釈をまとめる．
+header : sourceDesc	電子テキストが作られた元テキストの情報を示す．
+header : biblFull	厳密な構造を持つ書誌情報を示す．．TEIのファイル記述の全要素は，ここに記述される．
+header : encodingDesc	電子テキストとその元資料との関係を示す．
+header : schemaRef	describes or points to a related customization or schema file
+header : projectDesc	制作過程に関する情報も含めて，電子ファイルが作られた目的の詳細を示す．
+header : samplingDecl	コーパス等を作成する際，テキストを標本化する原理や手法に関する，散文による解説を含む．
+header : editorialDecl	テキストを符号化する際に適用される編集方針や編集方法の詳細を示す．
+header : correction	テキスト中に施された修正の状況や方法を示す．
+header : normalization	元資料が電子形式に変換される施される正規化の程度を示す．
+header : quotation	元資料にあった引用をどのように編集したのかを示す．
+header : hyphenation	元資料にあるハイフンが，符号化される場合にどのように扱われたかを示す．
+header : segmentation	当該テキストを分割した基準を示す．例えば，文，音単位，書記層など．
+header : stdVals	標準的な日付や数値を示す形式を特定する．
+header : interpretation	転記されたテキストに付加された，分析または解釈情報の範囲を示す．
+header : punctuation	specifies editorial practice adopted with respect to punctuation marks in the original.
+header : tagsDecl	タグ付けに関する詳細な情報を示す．
+header : tagUsage	テキスト中にある特定要素の使い方に関する情報を示す．
+header : namespace	当該要素が属する名前空間の形式名を示す．
+header : rendition	元資料テキスト中にある，ひとつ以上の要素の描出や現れ方に関する情報を示す．
+header : styleDefDecl	specifies the name of the formal language in which style or renditional information is supplied elsewhere in the document. The specific version of the scheme may also be supplied.
+header : refsDecl	標準的な参照の作られ方を示す．
+header : cRefPattern	URIへの標準的参照を変形する，表現・変形パタンを示す．
+header : prefixDef	defines a prefixing scheme used in data.pointer values, showing how abbreviated URIs using the scheme may be expanded into full URIs.
+header : listPrefixDef	contains a list of definitions of prefixing schemes used in data.pointer values, showing how abbreviated URIs using each scheme may be expanded into full URIs.
+header : refState	標石要素の手法として定義されている標準的な参照の構成要素をひとつ示す．
+header : classDecl	当該テキスト中で使用されている分類コードを定義する，ひとつ以上の分類法を示す．
+header : taxonomy	テキストの分類法を，書誌情報を参照したり，または構造化された分類法を示すことで，定義する．
+header : category	記述的な分類項目を示す．利用者が定義した分類法の元に上位分類項目中に入れ子にしてもよい．
+header : catDesc	テキスト分類や分類法における分類項目を示す．簡単な散文形式またはTEIのtextDescで使用される状況パラメータで示される．
+header : geoDecl	当該文書中にある要素geoの内容が表す座標の表記法を示す．
+header : appInfo	TEIファイルを編集したソフトウェアに関する情報を示す．
+header : application	当該文書に作用するソフトウェアに関する情報を示す．
+header : profileDesc	書誌情報的ではない詳細な解説を示す．例えば，言語や特殊言語，生成されたときの状況，参加者など．
+header : handNote	手書き資料中にある特定のスタイルまたは筆致を示す．
+header : abstract	符号化する人によって既存の元文書の前に付加された要約または正式な要約を含む．
+header : creation	テキストの作成に関する情報を示す．
+header : langUsage	テキスト中にある言語，特殊言語，社会的方言，方言などを示す．
+header : language	テキスト中にあるひとつの言語または特殊言語を示す．
+header : textClass	標準的な分類スキーム，分類語彙などにより，テキストの性格や話題を示す情報をまとめる．
+header : keywords	テキストの話題や性格を特定するキーワードや句のリストを示す．
+header : classCode	当該テキストで使用されている，ある規格に従った分類コードを示す．
+header : catRef	分類法やテキスト分類中の，ひとつ以上の分類項目を定義する．
+header : calendarDesc	contains a description of the calendar system used in any dating expression found in the text.
+header : calendar	describes a calendar or dating system used in a dating formula in the text.
+header : correspDesc	contains a description of the actions related to one act of correspondence.
+header : correspAction	contains a structured description of the place, the name of a person/organization and the date related to the sending/receiving of a message or any other action related to the correspondence.
+header : correspContext	provides references to preceding or following correspondence related to this piece of correspondence.
+header : xenoData	provides a container element into which metadata in non-TEI formats may be placed.
+header : revisionDesc	ファイルの改訂履歴を示す．
+header : change	研究者間で共有されている電子テキストの特定の版に対して施された変更や修正を示す．
+core : p	散文の段落を示す．
+core : foreign	記述のベースで使われている言語と異なる言語による語句を定義する．
+core : emph	言語学的，修辞学的に強調されるべき語句を示す．
+core : hi	周囲のテキストとは見た目が異なっている語句を示す．
+core : distinct	言語上，異なる語句を示す．例えば，古語，技術語，方言，忌諱語など．また，特定グループでしか通用しない特殊言語など．
+core : said	考えたり声に出されたりした一節を示す．元資料中に明示されているかどうか，間接的な伝聞かどうか，実在の人物に依るものかどうか，などは問わない．
+core : quote	語り手や著者が，当該テキスト外にあるものに向けた，一節を示す．
+core : q	周りのテキストとは(表面上)異なっているようにマークアップされている部分を示す．例えば，直接話法や思考，技術用語や専門語，著者による区別，引用，言及されているが使われていない一節など．
+core : cit	書誌参照を伴い，他の文書からの引用を示す．例えば，辞書の場合には，当該単語形が出現する例文を示したり，当該見出し語の翻訳や用例を示したりする．
+core : mentioned	言及された語句を示す．
+core : soCalled	著者や語り手が，責任を持ちたくない語句を示す．例えば，英語文化圏では，引用符号で囲んだり，イタリック体で示される部分．
+core : desc	当該要素，属性，属性値を採用した目的の簡単な解説を示す．
+core : gloss	語句の説明や定義を示す．
+core : term	技術用語とされる単一語，複数語，記号表示を示す．
+core : sic	明らかに間違い，不正確ではあるが，そのまま収録してあるテキスト．
+core : corr	元資料中の明らかな間違いを正したものを示す．
+core : choice	テキスト中の同じ場所で，異なる符号化記述をまとめる．
+core : reg	正規化された読みを示す．
+core : orig	正規化または校正は施されていない，元の形のまま符号化されている読みを示す．
+core : gap	TEIヘダーにある編集上の理由，または当該資料が判読できない・聞こえないことを理由に，転記の際に省略された部分の場所を示す．
+core : add	著者，筆写者，注釈者，校正者によって挿入された文字，単語，句を示す．
+core : del	著者・筆写者・注釈者・校正者により，削除または削除として符号化または余分なものまたは間違いとして示されている，文字，単語，句を示す．
+core : unclear	元資料からは判読できないまたは聞こえないという理由で，確実に転記できない語句や一節を示す．
+core : name	固有名詞．
+core : rs	一般的な意味での名前や参照文字列．
+core : email	eメールを届けるeメールアドレスを示す．
+core : address	郵便配達情報を示す．例えば，出版者，組織，個人の住所など．
+core : addrLine	住所情報を記述する行を示す．
+core : street	住所情報としての，通りを表す完全情報を示す．建物の名前や番号，通りの名前など．
+core : postCode	郵便の配達や区分けを簡単にするための，郵便の宛名情報の部分となる数値または文字を含む．
+core : postBox	郵便配達で識別子となる，通り名以外の，数値などを示す．
+core : num	各種形式による数値を示す．
+core : measure	ある対象や商品の大きさを表す語句を示す．一般には，数値，単位，商品名を含む．
+core : measureGrp	大きさに関する規格を示す．例えば，手書き資料のページの高さや幅などを示すためのもの．
+core : unit	contains a symbol, a word or a phrase referring to a unit of measurement in any kind of formal or informal system.
+core : date	日付を示す．
+core : time	時間を表す語句を示す．
+core : abbr	あらゆる種類の名称の省略を一つ含む.
+core : expan	省略形の元の表現を示す．
+core : ptr	他の場所を示すポインターを定義する．
+core : ref	他の場所への参照を定義する．多くは，追加テキストまたはコメントを含む．
+core : list	リストのような，項目列を示す．
+core : item	リストのいち項目を示す．
+core : label	リスト中の項目に関連するラベルを示す．用語集においては，定義される用語を示す．
+core : head	各種の見出しを示す．例えば，節のタイトル，リストや用語集，手書き資料の解説などにある見出し．
+core : headLabel	リストなどにおけるラベルや，用語集などにおける語彙を示す．
+core : headItem	用語集などのリスト構造における各項目の見出しを示す．
+core : note	注釈・コメント．
+core : index	索引項目化されたものの場所を示す．
+core : media	indicates the location of any form of external media such as an audio or video clip etc.
+core : graphic	テキスト列中にある図，絵，図表の場所を示す．
+core : binaryObject	行中の画像やその他のオブジェクトを示す，符号化されたバイナリデータを示す．
+core : milestone	当該セクションが，構造要素により表現することができない場合に，標準的な参照機能により，テキストの各種セクション間にある境界点を示す．
+core : gb	marks the beginning of a new gathering or quire in a transcribed codex.
+core : pb	テキストのページ境界を，標準的な参照システム示す．
+core : lb	ある版における新しい(印刷上の)行の始まりを示す．
+core : cb	テキストの段と段の境界を，標準的な参照システムにより示す．
+core : analytic	独立した出版物ではなく，書籍や雑誌に収録されている作品の書誌情報を記述する．
+core : monogr	独立したもの(例えば，物理的に独立したもの)として出版された対象(例えば，書籍や雑誌)の書誌情報項目を示す．
+core : series	書籍または他の書誌項目のシリーズに関する情報を示す．
+core : author	書誌情報における，著作者(個人・団体)の名前を示す．書誌項目における歴任者を示す第一位の記述を示す．
+core : editor	書誌情報における，第二位の責任者を示す．個人，団体，組織,編集者，編纂者，翻訳者の名前など．
+core : respStmt	著者や編集者など特定の役割を示す要素が充分ではない場合に，テキスト，版，記録などの知的内容に関する責任を示す．
+core : resp	人物の知的責任の性質を表す一節を示す．
+core : title	作品の完全なタイトルを示す．
+core : meeting	会議中の項目を書誌情報で記述する際や，発行物の見出しや序文に現れる，会合や会議を表す，形式化された記述的タイトルを示す．
+core : imprint	書誌情報の対象となるものの，出版に関する情報．
+core : publisher	書誌項目の出版や頒布に責任のある団体の名前を示す．
+core : biblScope	書誌情報の参照範囲を示す．例えば，ページ番号，下部単位の名前など．
+core : citedRange	defines the range of cited content, often represented by pages or other units
+core : pubPlace	書誌項目が出版された場所の名前を示す．
+core : bibl	厳密でない構造を持つ書誌情報の引用を含む．下位要素で明示されていたり，いなかったりする．
+core : biblStruct	構造を持った書誌情報を示す．下位要素として，書誌情報を示す要素が，決められた順番で出現する．
+core : listBibl	書誌項目引用のリストを示す．
+core : relatedItem	当該内容と関連する書誌情報項目を示す，または参照する．例えば，構成要素または他の版など．
+core : l	韻文中の1行を示す．行として完全でない場合もある．
+core : lg	形式単位としてある，ある韻文の行をまとまりを示す．例えば，連，リフレイン，詩節など．
+core : sp	演技テキストまたは韻文・散文中にある個々の発話を示す．
+core : speaker	舞台関連の文章に出てくる1人以上の発話者の名前を示す．見出しやラベルとして書かれる．
+core : stage	舞台芸術テキスト中にある，ト書き相当を示す．
+textstructure : TEI	一つ以上のmodel.resourceLikeクラスを持つ一つのTEIヘッダを持つ，単一のTEI準拠文書を含む．teiCorpusエレメントには複数のTEI要素が含まれてもよい．
+core : teiCorpus	TEI準拠のコーパス全体を示す．ヘダーが1つと，ひとつ以上の要素TEIから成る．各要素TEIには，テキストヘダーと要素textが1つある．
+textstructure : text	ひとつのテキストを示す．単体でも複合体でもよい．例えば，詩，舞台芸術，随筆，小説，辞書，コーパスなど．
+textstructure : body	前付，後付を除いた，単一の作品の本文全体を示す．
+textstructure : group	ある単位として独立している個別テキストをまとめた複合テキストを示す．例えば，ある著者の作品集やエッセイ集など．
+textstructure : floatingText	ひとつのテキストを示す．下位構造はあってもよい．当該部分はテキスト中のどこにでも出現できる．自在テキスト．
+textstructure : div	前付，本文，後付中のテキスト部分を示す．
+textstructure : div1	前付，本文，後付中の第1位のテキスト部分を示す．
+textstructure : div2	前付，本文，後付中の第2位のテキスト部分を示す．
+textstructure : div3	前付，本文，後付中の第3位のテキスト部分を示す．
+textstructure : div4	前付，本文，後付中の第4位のテキスト部分を示す．
+textstructure : div5	前付，本文，後付中の第5位のテキスト部分を示す．
+textstructure : div6	前付，本文，後付中の第6位のテキスト部分を示す．
+textstructure : div7	前付，本文，後付中の一番小さいレベルのテキスト部分を示す．
+core : divGen	ソフトウェアで自動生成されたテキスト部分の場所を示す．
+textstructure : trailer	テキスト部分の最後にある，結びのタイトルや脚注を示す．
+textstructure : byline	タイトルページや作品の冒頭や最後にある，作品の責任者を表す第一位の記述．
+textstructure : dateline	手紙や新聞記事などの前後に付加されている，場所，日付，時間などを簡易に示す．
+textstructure : argument	下位部分にあるテキストのトピックを整形のリストまたは散文説明を含む．
+textstructure : epigraph	章や節の始め，タイトルページなどにある引用(題辞)を示す．
+textstructure : opener	テキスト部分の始まりに，日付欄，署名欄，挨拶文言など，前置き的な部分としてあるものをまとめる．典型例は，手紙の場合である．
+textstructure : closer	挨拶文言，日付欄など，ある区分の終わり，特に手紙の終わりにある一連の文言をまとめる．
+textstructure : salute	(著者以外の)序文や献呈書簡などのテキスト部分に附属する挨拶文言または挨拶，または書簡や(著者による)序文の大和にある挨拶文言を示す．
+textstructure : signed	(著者以外の)序文や献呈書簡などのテキスト部分にある，結びの挨拶などを示す．
+textstructure : postscript	追伸を示す．例えば，手紙の場合など．
+textstructure : titlePage	前付や後付中にある，テキストのタイトルページを示す．
+textstructure : docTitle	当該文書のタイトルを示す．タイトルページにあるタイトルの全情報を含む．
+textstructure : titlePart	タイトルページに示されている，作品タイトルの下位部分を示す．
+textstructure : docAuthor	タイトルページにある(一般には署名欄にある)当該文書の著者名を示す．
+textstructure : imprimatur	作品の出版に関する公式の情報を示す．場合によっては，タイトルページやその左ページに出現する必要がある．
+textstructure : docEdition	タイトルページにある当該文書の版を示す．
+textstructure : docImprint	刊記にある出版関連情報を示す．例えば，出版日，出版者名など．一般にはタイトルページの下にある．
+textstructure : docDate	文書の日付を示す．一般にはタイトルページに書かれている．
+textstructure : front	本文より前，文書の始めにある序文としてあるもの(標題，タイトル，序文，献辞など)．
+textstructure : back	後付．本文の後に続く付録などを示す．
+gaiji : g	非標準的な文字やグリフを示す．
+gaiji : char	文字に関する情報を示す．
+gaiji : charName	当該文字の名前をユニコードに従って示す．
+gaiji : charProp	当該字またはグリフの特性に関する名前や値を示す．
+gaiji : charDecl	規格にない文字やグリフに関する情報を示す．
+gaiji : glyph	グリフの解説を示す．
+gaiji : glyphName	ユニコードに従った文字名で，グリフを示す．
+gaiji : localName	ユーザが定義した，ある素性の名前を示す．
+gaiji : mapping	属性typeで示される，親文字またはグリフと関連する，ひとつ以上の文字を示す．
+gaiji : unicodeName	登録されているユニコード基準素性または参考素性の名前を示す．
+gaiji : value	特性，属性，分析向けの値をひとつ示す．
+verse : metDecl	韻律パタンを表す表記法を示す．韻文のための要素(例えば，lg,l,segなど)にある属性met,real,rhymeの値として定義される．
+verse : metSym	明示的に，または要素metDecl中の他の記号要素により，韻律表記法の中にある重要な特定文字または文字列を記録する．
+verse : caesura	韻律行が分割されている場所を示す．
+verse : rhyme	韻文行の押韻部分を示す．
+drama : set	一般には，印刷された舞台テキストの前付にある，芝居の設定，時間，場所，現れ方などの情報を示す．
+drama : prologue	舞台における前口上を示す．例えば，配役以外の人物により発話されるもの．特定の演技や開催地と関連することもある．
+drama : epilogue	舞台芸術における納め口上を示す．例えば，特定の演目や場所と関連しているかもしれない，役者からの発話．
+drama : performance	芝居の部分が，一般にどのように演技されるのか，特定の場面でどのように演技されるのかを示す．
+drama : castList	ひとつの配役リストまたは配役表を示す．
+drama : castGroup	配役リストにある，ひとつ以上の要素castItemをまとめるもの．
+drama : castItem	配役リスト中の各項目を示す．ひとつの役，または台詞のない役のリストになる．
+drama : role	配役リスト中にある，役名を示す．
+drama : roleDesc	舞台芸術における登場人物の役を示す．
+drama : actor	登場人物リスト中の役者名を示す．
+drama : spGrp	contains a group of speeches or songs in a performance text presented in a source as constituting a single unit or number.
+drama : move	舞台上で，ひとり以上の登場人物の出やはけを示す．
+drama : view	脚本中における視覚状況の部分を示す．観客が見る部分で，一般には，台詞から独立してある．
+drama : camera	撮影時の，カメラアングルや視点を示す．
+drama : sound	音響効果，すなわち脚本や台本で指定されている一連の音を示す．
+drama : caption	見出しや脚本のテキストを示す．
+drama : tech	役者以外に向けた，特別なト書きを示す．
+spoken : scriptStmt	発話テキストで使われている台本の詳細に関する引用を示す．
+spoken : recordingStmt	発話テキストの転記の元になる録音，録画されたものを示す．
+spoken : recording	発話テキストの元資料として使われる，直接または放送から事象を録音，録画したものの詳細を示す．
+spoken : equipment	発話テキストを録音・録画する際に使用された機器や媒体の技術的詳細を示す．
+spoken : broadcast	発話されたテキストの元となる放送を示す．
+spoken : transcriptionDesc	describes the set of transcription conventions used, particularly for spoken material.
+spoken : u	一般に沈黙または話者交替が前後する，発話の時間．
+spoken : pause	発話にある間を示す．
+spoken : vocal	音声化されているが，必ずしも単語化される必要はない現象を示す．例えば，有声の間，単語化されない相づち，など．
+spoken : kinesic	コミュニケーション現象を示す．必ずしも言語化されている必要はない．例えば，身振り，眉をひそめるなど．
+spoken : incident	必ずしも言語化またはコミュニケーションには上らない現象や出来事を示す．例えば，偶発的な雑音またはコミュニケーションに影響を与える他の事象など．
+spoken : writing	発話テキストで参加している表す，書き起こしテキストの一節を示す．
+spoken : shift	発話者による一連の発話(パラ言語)素性が変化する場所を示す．
+spoken : annotationBlock	様々な注釈をグループ化する．例えば，話されたセグメントの並行解釈のためなど．
+dictionaries : superEntry	同形異義語の集合にある，一連の項目をまとめる．
+dictionaries : entry	それなりに構造化されている辞書項目を示す．
+dictionaries : entryFree	要素entryにある制約に必ずしも従わない辞書項目を示す．
+dictionaries : hom	項目中にあるひとつの同綴異義語に関する情報をまとめる．
+dictionaries : sense	辞書項目にある単語の意味と関連する情報をまとめる．例えば，定義，用例，翻訳など．
+dictionaries : dictScrap	句レベルの辞書要素をとる辞書項目を示す．
+dictionaries : form	ひとつの見出し語の書記または発話形式の情報を全てまとめる．
+dictionaries : orth	辞書の見出し語の正書形を示す．
+dictionaries : pron	当該語の発音を示す．
+dictionaries : hyph	辞書の見出しにあるハイフン付き語形，または他の語形にあるハイフン情報を示す．
+dictionaries : syll	見出し語の分節法を示す．
+dictionaries : stress	切り出しが可能であれば，辞書の見出し語のアクセントパタンを示す．
+dictionaries : gram	辞書や用語集のデータ中にある，用語，単語，形式に関する文法情報を示す．
+dictionaries : gen	辞書中の語彙項目にある文法形態素の性を示す．
+dictionaries : number	辞書において，語形と関連する文法上の数を示す．
+dictionaries : case	辞書中における格情報を示す．
+dictionaries : per	辞書にある屈折形と関連する，文法上の人称(1人称，2人称,　3人称など)を示す．
+dictionaries : tns	辞書にある屈折形と関連する文法上の時制を示す．
+dictionaries : mood	文法上の動詞の法に関する情報を示す．例えば，直説法，仮定法，命令法など．
+dictionaries : iType	語彙項目の屈折の種類を示す．
+dictionaries : gramGrp	語彙項目，の形態統語情報，例えば，gen,number,case,iTypeをまとめる．
+dictionaries : pos	辞書の見出し語の品詞を示す．例えば，名詞，動詞，形容詞など．
+dictionaries : subc	下位範疇情報を示す．例えば，自動詞・他動詞，可算・非可算など．
+dictionaries : colloc	見出し語の連語関係を示す．
+dictionaries : def	辞書項目における定義を示す．
+dictionaries : etym	辞書項目の語源情報を示す．
+dictionaries : lang	語源学または他の言語学上の論議で現れる言語名を示す．
+dictionaries : usg	辞書項目中にある用例情報を示す．
+dictionaries : lbl	語形のラベルを示す．例えば，翻訳，短縮形などの各種省略形など．
+dictionaries : xr	利用者に，他の場所を表す句，文，図形を示す．
+dictionaries : re	見出し語と関連する語彙項目を表す辞書項目を示す．例えば，より上位の項目を持つ複合句，派生形など．
+dictionaries : oRef	辞書の用例において，見出し語の正書形式への参照を示す．
+dictionaries : pRef	辞書の用例中で，見出し語の発音への参照を示す．
+msdescription : msDesc	単一の識別可能な手書き資料の解説を示す．
+msdescription : catchwords	古典籍において，冊子や初期刊本の折丁の順番を正しくするために使用されるシステムを示す．一般には，ページの脚に注釈(つなぎことば)を記す．
+msdescription : dimensions	大きさ・程度を示す．
+msdescription : dim	contains any single measurement forming part of a dimensional specification of some sort.
+msdescription : height	背に沿って計測された大きさを示す．
+msdescription : depth	冊子の背と平行した深さを示す．
+msdescription : width	背に対して直角に計測される計測値を示す．
+msdescription : heraldry	紋章学的記述を含む．例えば，紋章記述や紋章など．
+msdescription : locus	手書き資料中の場所を定義する．一般には，(多くの場合不連続の)一連の折丁参照による．
+msdescription : locusGrp	groups a number of locations which together form a distinct but discontinuous item within a manuscript, manuscript part, or other object.
+msdescription : material	手書き資料を構成する素材を表す語句を示す．
+msdescription : objectType	contains a word or phrase describing the type of object being referred to.
+msdescription : origDate	手書き資料が生まれた日付を特定するたための日付を示す．
+msdescription : origPlace	手書き資料が生まれた場所を特定するための場所を示す．
+msdescription : secFol	ユニークな識別子を示すために，冊子中の特定点にある単語を示す．
+msdescription : signatures	冊子における葉または折丁の記号に関する情報を示す．
+msdescription : stamp	印などにある語句を示す．
+msdescription : watermark	すかし模様などを表す語句を示す．
+msdescription : msIdentifier	解説されている手書き資料を特定するために必要な情報を示す．
+msdescription : institution	手書き資料を特定する，一般にはそれを所蔵する大学や図書館といった組織の名前を示す．
+msdescription : repository	手書き資料が収められている収蔵館の名前を示す．恐らく，団体の名前の一部である．
+msdescription : collection	手書き資料のコレクション名を示す．必ずしも一ヶ所に保管されている必要はない．
+msdescription : altIdentifier	当該手書き資料を示す，代わりとなるIDまたは昔のIDを示す．例えば，昔のカタログ番号など．
+msdescription : msName	手書き資料を示す構造化されていない別名の形式を示す．例えば，ocellusnominumなどの愛称など．
+msdescription : colophon	当該手書き資料のコロフォン(奥付情報)を示す．例えば，制作の日時，場所，主体，制作主体，制作理由など．
+msdescription : explicit	手書き資料の巻末語句(explicit)を示す．すなわち，当該テキストの終了を示す語句のことである．これは，朱書き部分(rubric)やコロフォン(奥付情報)とは異なる．
+msdescription : filiation	手書き資料の親子関係，すなわち，同じテキストを持つ現存する手書き資料と，その原本(protographs),異本(antigraphs),転写本(apographs)との関係．
+msdescription : finalRubric	テキスト部分の終わりを示す文字列を示す．その著者やタイトルを含むことがある．一般には，テキスト中にある朱書きや，大きさや種類の異なる字体など，異なる視覚効果で示されている．
+msdescription : incipit	手書き資料の冒頭語句(incipit)を示す．冒頭語句とは，テキストの書き出しにある語句で，これに先行してある朱書き部分を除いた，当該作品を特定するに充分な文量の部分である．冒頭語句は，タイトル部分において，作品への参照を示す手段としてよく使用されていた．
+msdescription : msContents	手書き資料の知的内容を，一連の段落または一連の構造化された手書き資料項目として示す．
+msdescription : msItem	手書き資料の知的内容の中に出現する，独立した作品または項目を示す．
+msdescription : msItemStruct	手書き資料の知的内容の中に出現する，独立した作品または項目の構造的解説を示す．
+msdescription : rubric	朱書き部分，すなわち，手書き資料の見出し部分のテキストを示す．手書き資料中にあるあるテキスト部分の始点を示すもので，よく著者やタイトルが記されている．テキストとは異なって示されており，一般には赤いインクで書かれている．または，異なる大きさや種類の字体が使われるなど，ある視覚効果が使われている．
+msdescription : summary	contains an overview of the available information concerning some aspect of an item or object (for example, its intellectual content, history, layout, typography etc.) as a complement or alternative to the more detailed information carried by more specific elements.
+core : textLang	手書き資料中の言語や書記システムを示す．(要素langUsageにある情報と対位する)
+msdescription : physDesc	手書き資料の物理的な解説を示す．選択的に，クラスmodel.physDescPartにある要素に下位分解される．
+msdescription : objectDesc	当該対象の物理的構成要素の解説を示す．
+msdescription : supportDesc	手書き資料のテキスト部分を作る物理的な素材を示す要素をまとめる．
+msdescription : support	手書き資料でテキストが書かれている部分を作る物理的な素材に関する説明を示す．
+msdescription : collation	当該の葉または一度折られた折丁が，物理的にどのように構成されているかを示す．
+msdescription : foliation	冊子における葉やページを数える付番システムを示す．
+msdescription : condition	当該手書き資料の，物理的な状態を示す．
+msdescription : layoutDesc	手書き資料のレイアウト情報をまとめる．
+msdescription : layout	当該ページ上でテキストがどのようにレイアウトされているかを示す．例えば，罫線，穴，などの書記支度技法．
+msdescription : handDesc	手書き資料にある異なる書記全てについての解説を示す．
+msdescription : typeDesc	contains a description of the typefaces or other aspects of the printing of an incunable or other printed source.
+msdescription : typeNote	describes a particular font or other significant typographic feature distinguished within the description of a printed resource.
+msdescription : scriptDesc	contains a description of the scripts used in a manuscript or other object.
+header : scriptNote	describes a particular script distinguished within the description of a manuscript or similar resource.
+msdescription : musicNotation	記譜法の種類を示す．
+msdescription : decoDesc	当該手書き資料の装飾を，一連の散文段落，または一連の要素decoNoteで示す．
+msdescription : decoNote	当該手書き資料の装飾要素またはそのようなものを示す．
+msdescription : additions	当該手書き資料中にある，重要な付加物を示す．例えば，欄外の書き込みや注釈など．
+msdescription : bindingDesc	手書き資料の現行または以前の装訂に関する情報を示す．一連の段落または一連の要素bindingで示される．各単位が当該手書き資料の各装訂に対応する．
+msdescription : binding	1つの装訂に関する情報を示す．例えば，手書き資料でいうカバーの種類，表紙など．
+msdescription : sealDesc	手書き資料に付属するシールや他の付着物について，一連の段落や，一連の要素sealにより，可能であれば要素decoNoteと共に示す．
+msdescription : seal	手書き資料にあるシールや付着物を示す．
+msdescription : accMat	当該手書き資料と関連する情報の詳細を記述するための要素．例えば，当該手書き資料が書かれた時代とは異なる時期の文書や断片についてについての詳細を示す．例えば，当該手書き資料が作成された以前に書かれた文書やその断片であったりするものについて．
+msdescription : history	手書き資料の歴史を表す要素をまとめる．
+msdescription : origin	手書き資料の出自に関する解説や情報を示す．
+msdescription : provenance	手書き資料を入手するまでの歴史に関する，特定可能なエピソードに関する情報を示す．
+msdescription : acquisition	当該手書き資料が入手された経緯についての情報を示す．
+msdescription : additional	当該手書き資料に関する書誌情報などの付随情報まとめる．または当該資料の複製に関する管理情報をまとめる．
+msdescription : adminInfo	当該手書き資料，またはその記録文書そのものの管理・利用形態についての情報を示す．
+msdescription : recordHist	元になった手書き資料の，元や改訂に関する情報を示す．
+msdescription : source	手書き資料にある，元資料に関する情報を示す．
+msdescription : custodialHist	手書き資料の管理履歴を示す．散文形式または一連の日付つき履歴で示す．
+msdescription : custEvent	手書き資料の管理履歴における，ひとつの事象を示す．
+msdescription : surrogates	手書き資料が電子化されたものまたは写真の表現に関する情報を示す．
+msdescription : msPart	元々は別のものであったものを，新しくひとつにまとめ直された手書き資料の情報を示す．
+msdescription : msFrag	contains information about a fragment of a scattered manuscript now held as a single unit or bound into a larger manuscript.
+transcr : facsimile	転記または符号化されたテキストではなく，画像データ中にある，書記資料の表現を示す．
+transcr : sourceDoc	contains a transcription or other representation of a single source document potentially forming part of a dossier génétique or collection of sources.
+transcr : surface	矩形の座標により，書記の表面を定義する．選択的に，空間や矩形範囲中のひとつ以上の図表表現をまとめる．
+transcr : surfaceGrp	defines any kind of useful grouping of written surfaces, for example the recto and verso of a single leaf, which the encoder wishes to treat as a single unit.
+transcr : zone	要素surfaceにある表面上の矩形範囲を定義する．
+transcr : path	defines any line passing through two or more points within a surface element.
+transcr : addSpan	著者，筆写者，注釈者，校正者の手による長めの追加テキストを挿入する始点を示す(addも参照のこと)．
+transcr : damage	当該文献におけるテキストの損傷部分を示す．
+transcr : damageSpan	読める程度の損傷がある，一連のテキストの始点を示す．
+transcr : delSpan	著者・筆写者・注釈者・校正者により，削除または削除として符号化または余分なものまたは間違いとして示されている，長めのテキスト部分の始点を示す．
+transcr : ex	編集者や転記者が，省略形を元に戻した結果の文字列を示す．
+transcr : fw	版面の周りにある柱やノンブルを示す．
+transcr : handNotes	元資料にある特定可能な筆致を記録する，ひとつ以上の要素handNoteを示す．
+transcr : handShift	テキストにおける新しい筆致の始まり，または筆写者の仕事の開始を示す．
+transcr : am	当該省略形が，原形を省略またはそれに代わったことを示す文字列または記号列．
+transcr : restore	編集者や著者による指示を覆し，以前の状態のテキストを復元することを示す．
+transcr : space	元資料にある重要な空白の場所を示す．
+transcr : subst	追加と削除が一連の調整と考えられる場合，そのひとつ以上の追加部分や削除部分をまとめる．
+transcr : substJoin	identifies a series of possibly fragmented additions, deletions or other revisions on a manuscript that combine to make up a single intervention in the text
+transcr : supplied	転記者や編集者にひょって付加されたテキストを示す．例えば，元のテキストが物理的損傷や欠損から判読できない場合などに付加されるもの．
+transcr : surplus	marks text present in the source which the editor believes to be superfluous or redundant.
+transcr : secl	Secluded. Marks text present in the source which the editor believes to be genuine but out of its original place (which is unknown).
+transcr : line	contains the transcription of a topographic line in the source document
+header : listChange	groups a number of change descriptions associated with either the creation of a source text or the revision of an encoded text.
+transcr : listTranspose	supplies a list of transpositions, each of which is indicated at some point in a document typically by means of metamarks.
+transcr : metamark	contains or describes any kind of graphic or written signal within a document the function of which is to determine how it should be read rather than forming part of the actual content of the document.
+transcr : mod	represents any kind of modification identified within a single document.
+transcr : redo	indicates one or more cancelled interventions in a document which have subsequently been marked as reaffirmed or repeated.
+transcr : retrace	contains a sequence of writing which has been retraced, for example by over-inking, to clarify or fix it.
+transcr : transpose	describes a single textual transposition as an ordered list of at least two pointers specifying the order in which the elements indicated should be re-combined.
+transcr : undo	indicates one or more marked-up interventions in a document which have subsequently been marked for cancellation.
+textcrit : app	校勘資料中に一つのエントリを含む。関連部分に任意のレンマと、通常1つまたは複数の読みと注釈を持つ。
+textcrit : listApp	contains a list of apparatus entries.
+textcrit : lem	異なるテキストにおける対象語，すなわち基底テキスト(basetext)を示す．
+textcrit : rdg	異なるテキスト中で，ひとつの読みを示す．
+textcrit : rdgGrp	異なるテキストで，系統関係や類縁性があるとされる，二つ以上の読みをまとめる．
+textcrit : witDetail	特定の解釈に関連する，特定の文献について詳細な情報を示す．
+textcrit : wit	読みの元となる文献を表すひとつ以上の文献記号のリストを示す．
+textcrit : listWit	校勘資料中で参照されている文献の定義のリストを示す．選択的に，グループとして構造化されている．
+textcrit : witness	校勘資料で参照されている文献ひとつの情報，またはひとつの印が参照している文献のリストを示す．
+textcrit : witStart	断片的な文献のテキストの始点または再開点を示す．
+textcrit : witEnd	断片的な文献のテキストの終わりまたは停止点を示す．
+textcrit : lacunaStart	殆ど完全である文献にある脱文の始めを示す．
+textcrit : lacunaEnd	殆ど完全である文献中にある脱文の終わりを示す．
+textcrit : variantEncoding	校勘対象を符号化する手法を示す．
+namesdates : orgName	組織の名前を示す．
+namesdates : persName	人物の固有名詞を示す．例えば，名，姓，敬称，追加名など．
+namesdates : surname	(継承される)苗字を示す．姓名中の名，洗礼名，愛称，別称とは異なる．
+namesdates : forename	人物に与えられた名前のうち，名の部分，すなわち個人を表す部分を示す．
+namesdates : genName	似た名前を区別する為に，相対的な年齢関係，世代関係などの情報を示す．
+namesdates : nameLink	名前の中で使われているが，その一部としては見られない，関連する句やリンクを示す．例えば，vanderやofなど．
+namesdates : addName	付加的な名前要素を示す．例えば，愛称，渾名，別名などの個人名．
+namesdates : roleName	参照されるものの，社会的な役割や地位，例えば，公式な役職名や地位などを示す，名前要素を示す
+namesdates : placeName	絶対的，相対的場所名を示す．
+namesdates : bloc	複数の国や地域を跨ぐ地政学的な名前を示す．
+namesdates : country	1つの国家に相当する地政学的な単位名を示す．国家，植民地，共同体・連邦を含む．これは，行政単位上の地域よりも大きい単位で，連合より小さな単位である．
+namesdates : region	行政上の単位の名前を示す．例えば，地方，郡，居住地など．居住地よりも広く，国家より狭い地域．
+namesdates : settlement	地政学上または行政上の単位としてある市，街，村などの居住地の名前を示す．
+namesdates : district	場所を示す要素として，集落より小さい名前を示す．例えば，小教区や区など，行政上・地勢上の単位．
+namesdates : offset	当該表現に含まれている2つの場所名，日付，時間のオフセットの方向を示す，相対的な時空表現の部分を示す．
+namesdates : geogName	ウィンドラッシュ峡谷，シナイ山などの地理的特性に関する名前．
+namesdates : geogFeat	地理上の名前，例えば，谷，山などに含まれている地物を特定する名前を示す．
+namesdates : affiliation	人物が所属している，またはしていた団体に関する情報を示す．例えば，雇い主や出資者など．
+namesdates : age	人物の年齢を示す．
+namesdates : birth	人物の出生に関する情報を示す．例えば，日時や場所など．
+namesdates : climate	ある場所の天候に関する情報を示す．
+namesdates : death	人物の死亡に関する情報を示す．例えば，日付や場所など．
+namesdates : education	人物の学歴を示す．
+namesdates : event	人生における特定の重要事象の解説を示す．
+namesdates : faith	人物の信仰・宗教を示す．
+namesdates : floruit	人物が活躍した時期に関する情報を示す．
+namesdates : geo	地球上の一点，線，領域を表すための，地理上の座標を示す．
+namesdates : langKnowledge	個人の言語学的知識を散文または要素langKnownのリストでまとめる．
+namesdates : langKnown	個人の言語能力を示す．すなわち，単一言語の知識を示す．
+namesdates : listOrg	特定可能な団体に関する情報を示す解説のリストを示す．
+namesdates : listEvent	contains a list of descriptions, each of which provides information about an identifiable event.
+namesdates : listPerson	特定可能な個人やグループに関する情報のリストを示す．例えば，言語交流の参加者や，歴史資料中で参照される人物など．
+namesdates : listPlace	場所のリストを示す．選択的に，場所間の(包含関係ではなく)関連性を示すリストが続く．
+namesdates : location	地理上の座標集合，地政学上の名前付き実体，アドレスなどにより場所を定義する．
+namesdates : nationality	人物の国籍や市民権の形式的でない解説を示す．
+namesdates : occupation	人物の仕事や職業の，形式的でない説明を示す．
+namesdates : org	特定可能な団体の情報を示す．例えば，会社，集団など，人の集まり．
+namesdates : listRelation	人，場所，組織間の関係に関する情報を，散文またはリンクによる形式的表現で示す．
+namesdates : person	特定可能な個人の情報を示す．例えば，言語交流の参加者，歴史資料中で参照される人物など．
+namesdates : persona	provides information about one of the personalities identified for a given individual, where an individual has multiple personalities.
+namesdates : personGrp	分析上，ひとりの人物として扱われる，個人のグループを示す．
+namesdates : place	地理上の場所のデータを示す．
+namesdates : population	ある場所の人口に関する情報を示す．
+namesdates : relation	指定された参加者グループ間の関連性の種類を示す．
+namesdates : residence	人物の，現在または過去の住居を示す．
+namesdates : sex	人物の性別を示す．
+namesdates : socecStatus	ある個人の，社会的・経済的状態を示す，形式的でない解説を示す．
+namesdates : state	人物，場所，組織などの，現在の社会的状態や地位を示す．
+namesdates : terrain	場所の地形情報を示す．
+namesdates : trait	人物や場所の文化的な特性を示す．
+namesdates : objectName	contains a proper noun or noun phrase used to refer to an object.
+namesdates : object	contains a description of a single identifiable physical object.
+namesdates : listObject	contains a list of descriptions, each of which provides information about an identifiable physical object.
+namesdates : objectIdentifier	groups one or more identifiers or pieces of locating information concerning a single object.
+namesdates : nym	各種名前の，標準的な名前または名前の部分の定義を示す．
+namesdates : listNym	別名，すなわち，一般的に使われている名前のリストを示す．
+figures : table	表形式で示されるテキストを，行と列で示す．
+figures : row	表の1行を示す．
+figures : cell	表中のひとつのセルを示す．
+figures : formula	数式を示す．
+figures : notatedMusic	encodes the presence of music notation in a text
+figures : figure	図表を示すまたは含む要素をまとめる．
+figures : figDesc	図表の内容や現れ方について簡単な散文で解説を示す．当該図表を示さないで記録する場合に使用される．
+corpus : textDesc	状況パラメータにより，テキストの情報を示す．
+corpus : particDesc	言語交流における，特定可能な発話者，声，その他の参加者を示す．
+corpus : settingDesc	言語交流が行われた状況設定を，散文または一連の要素settingにより示す．
+corpus : channel	テキストが収録・伝搬されている媒体を示す．例えば，書かれてあるテキストであれば，印刷本，原稿，eメールなどで，発話されたテキストであれば，ラジオ，電話，直接会話など．
+corpus : constitution	テキストの内部構造を示す．例えば，部分的，完全など．
+corpus : derivation	当該テキストの真性度を示す．
+corpus : domain	当該テキストの出現に関する最も重要な社会的状況を示す．例えば，私的，公的，教育上，宗教上など．
+corpus : factuality	当該テキストの現実度を示す．例えば，フィクション，ノンフィクションなど．
+corpus : interaction	当該テキストの生成に関わった人たちによる相互作用の程度，濃度，性質を示す．例えば，応答，合いの手，コメントなど．
+corpus : preparedness	テキストが準備されたものか，即興的なものかの程度を示す．
+corpus : purpose	当該テキストの目的や伝達に関する機能の性質を示す．
+corpus : setting	言語交流が行われたひとつの状況設定を示す．
+corpus : locale	場所の性質を表す簡単な情報を示す．例えば，部屋，レストラン，公園のベンチなど．
+corpus : activity	言語交流の参加者が行った発話以外の活動を示す．
+linking : link	他の要素では上手く示せない，要素や一節間にある関連性やハイパーテキストリンクを定義する．
+linking : linkGrp	関連性やハイパーテキストリンクの集合を定義する．
+linking : ab	任意の部分的テキスト単位を示す．特定の意味はなくとも，段落に相当する，句レベル・挿入レベルの単位として無名単位になる．
+linking : anchor	テキスト要素であるかどうかに関係なく，テキスト中で，参照先になるIDを示す．
+linking : seg	任意の句レベルのテキスト単位を示す(要素segを含む)．
+linking : when	同じ要素timeline中にある他の要素に対応する時点，または絶対的な時点を示す．
+linking : timeline	時間的なまとまりを示すために，発話テキストの要素をリンクすることができる，時間軸上の順序付き時点の集合を示す．
+linking : join	バラバラにあるテキスト部分を参照し，ひとつのテキスト部分を指定する．
+linking : joinGrp	要素joinやポインタをまとめる．
+linking : alt	要素などが選択的である場合のいち選択肢を示す．
+linking : altGrp	要素altまたはポインタ要素ptrをまとめる．
+analysis : s	文に相当するテキスト単位を示す．
+analysis : cl	言語学上の節を示す．
+analysis : phr	文法上の句を示す．
+analysis : w	文法上の語を示す(正書形である必要はない)．
+analysis : m	言語学上の形態素を示す．
+analysis : c	文字を示す．
+analysis : pc	contains a character or string of characters regarded as constituting a single punctuation mark.
+analysis : span	テキスト部分に解釈的注釈を関連づける．
+analysis : spanGrp	要素spanをまとめる．
+analysis : interp	あるテキスト部分とリンクする，特定の解釈的注釈をまとめる．
+analysis : interpGrp	責任者や分類を共にする，関連し合う解釈をまとめる．
+iso-fs : fsdDecl	ひとつ以上の素性構造宣言または素性構造宣言へのリンクを含む，素性システム宣言を示す．
+iso-fs : fsDecl	ひとつの素性構造を宣言する．
+iso-fs : fsDescr	要素fsDeclで定義される素性構造の内容を，散文で示す．
+iso-fs : fsdLink	素性構造宣言により素性構造の名前を示す．
+iso-fs : fDecl	ひとつの素性を宣言する．名前，構造，定義域，デフォルト値など．
+iso-fs : fDescr	当該素性により示されるものを，散文で示す．
+iso-fs : vRange	要素fs,vAltで示される素性値の範囲を定義する．要素fの妥当な値は，その範囲内になければならない．要素fが複数の値をとる場合(属性orgがそれを認めている時)，各値は当該要素vRangeが示す範囲内になければならない．
+iso-fs : vDefault	素性構造が要素fを持たないときのデフォルト値を宣言する．条件的でない場合，要素fsまたは値がもうひとつ(または，要素fDeclにある属性orgの値に依存する数だけ)付与される．条件的な場合，要素であればひとつ以上が付与される．デフォルト値が指定されていない場合，または条件が成立しない場合は，値noneをとるする．
+iso-fs : if	素性の条件におけるデフォルト値を定義する．当該値には，素性構造が指定される．
+iso-fs : then	要素if中のデフォルト値と条件部，または要素cond中の前提部と帰結部を区切る．
+iso-fs : fsConstraints	妥当な素性構造の内容に課す制約を示す．
+iso-fs : cond	素性構造の条件制約を定義する．前提部と帰結部は，素性構造として定義されている．前提部と帰結部が共に真であったとき，または前提部が偽であったときに，当該条件節は真となる．
+iso-fs : bicond	素性構造の制約を必要十分条件として定義する．前提部と帰結部は，素性構造またはそのグループとして定義される．当該制約は，与えられた2つの素性構造が共に真であるか，またはともに偽である場合に，真になる．
+iso-fs : iff	必要十分条件における前提部と帰結部の区切を示す．
+iso-fs : fs	素性構造を示す．すなわち，構造単位となる素性名-素性値の組の集合．
+iso-fs : f	素性値定義を示す．すなわち，素性名とその様々な値を示す．
+iso-fs : binary	二値として，素性値を示す．
+iso-fs : symbol	記号リスト中のいち項目を含む素性値規定のうち，値の部分を示す．
+iso-fs : numeric	素性値定義における値を示す．
+iso-fs : string	素性値規定において，値として文字列をとる値の部分を示す．
+iso-fs : vLabel	素性構造中，複数箇所に現れる，素性値規定の値の部分を示す．
+iso-fs : vColl	素性値規定において，複数の値を，集合，バック，リストなどで表す，値の部分を示す．
+iso-fs : default	素性値定義の既定値を示す
+iso-fs : vAlt	素性値規定において，妥当なひとつの値を表す，値の部分を示す．
+iso-fs : vNot	当該要素の内容の否定する素性値を示す．
+iso-fs : vMerge	属性orgで示された構造を使い，子要素が持つ値とマージした結果得られた素性値を示す．
+iso-fs : fLib	素性に関する要素のライブラリをまとめる．
+iso-fs : fvLib	再利用が可能な素性値をライブラリとしてまとめる．
+nets : graph	グラフを示す．ノードと矢(無向の場合は辺)の集合．
+nets : node	グラフのラベル付きノードを示す．
+nets : arc	グラフを構成するノード間の辺を示す．
+nets : tree	根，内部ノード，葉，矢(または辺)から成る木を示す．
+nets : root	木の根要素を示す．
+nets : iNode	木における内部ノードを示す．
+nets : leaf	木(構造)における葉(終端ノード)を示す．
+nets : eTree	順序付き根付き木を構成する部分木を示す．
+nets : triangle	未定義の部分木(eTree)，すなわち情報が付与されていない部分木を示す．
+nets : eLeaf	部分木における葉を示す．要素eTree中で使用される．
+nets : forest	根付き木のの集合を示す．
+nets : listForest	provides for lists of forests.
+certainty : precision	indicates the numerical accuracy or precision associated with some aspect of the text markup.
+certainty : certainty	当該マークアップの確信度を示す．
+certainty : respons	ある要素の決定に責任のある個人を特定する．
+tagdocs : att	属性の名前を示す．
+tagdocs : code	プログラミング言語のような形式言語のコードを示す．
+tagdocs : eg	例を示す．
+tagdocs : egXML	要素や属性の使用例を示す，整形式XMLデータによる用例をひとつ含む．要素egXMLが当該用例の根要素になる．
+tagdocs : gi	要素の名前(共通識別子)を含む．
+tagdocs : ident	形式言語にあるオブジェクトの識別子または名前を示す．
+tagdocs : tag	完全な開始タグ，終了タグのテキストを示す．属性規定はとることも可能だが，タグ開始区切子，タグ終了区切子は含まない．
+tagdocs : val	属性値をひとつ示す．
+tagdocs : specList	解説のリストが，散文形式の解説文中に挿入される場所を示す．
+tagdocs : specDesc	特定された要素またはクラスの解説は，文書中のこの場所にあるべきであることを示す．
+tagdocs : classRef	points to the specification for an attribute or model class which is to be included in a schema
+tagdocs : elementRef	points to the specification for some element which is to be included in a schema
+tagdocs : macroRef	points to the specification for some pattern which is to be included in a schema
+tagdocs : moduleRef	スキーマに組み入れられるモジュールを参照する．
+tagdocs : moduleSpec	いちモジュールの構造，内容，目的を記録する．例えば，外部から名前で参照可能な宣言集合などである．
+tagdocs : schemaSpec	TEI準拠のスキーマや文書を示す．
+tagdocs : specGrp	当該モジュール中にある規定をまとめる．
+tagdocs : specGrpRef	要素specGrpにより含まれる宣言が，この場所に挿入されるべきことを示す．
+tagdocs : elementSpec	構造，内容，その要素の目的などを示す．
+tagdocs : classSpec	TEI要素クラスにおける参照情報を示す．内容モデルに出現する要素のまとまり，共通する属性のまとまり，またはその両方．
+tagdocs : dataSpec	documents a datatype.
+tagdocs : macroSpec	パタンの機能や実装を解説する．
+tagdocs : remarks	要素，属性，クラス，エンティティに関する，まだ文書化されていない解説や論議を示す．
+tagdocs : listRef	場所への参照のリストを示す．当該文書中でも外部文書でもよい．
+tagdocs : exemplum	要素の使用例をひとつ示す．段落単位の解説を伴うかもしれない．
+tagdocs : classes	当該文書化されている要素やクラスの構成要素や下位クラスを示す．
+tagdocs : memberOf	親要素や親クラスを示す．
+tagdocs : equiv	親要素と同等とされる構成要素を，相互参照または外部リンクで示す．
+tagdocs : altIdent	特定言語において，XMLの要素，クラス，属性などで推奨される名前を示す．
+tagdocs : model	describes the processing intended for a specified element.
+tagdocs : modelSequence	any sequence of model or modelSequence elements which is to be processed as a single set of actions
+tagdocs : modelGrp	any grouping of model or modelSequence elements with a common output method
+tagdocs : outputRendition	describes the rendering or appearance intended for all occurrences of an element in a specified context for a specified type of output.
+tagdocs : paramList	list of parameter specifications
+tagdocs : paramSpec	supplies specification for one parameter of a model behaviour
+tagdocs : param	provides a parameter for a model behaviour by supplying its name and an XPath expression identifying the location of its content.
+tagdocs : content	当該スキーマの宣言を示す．
+tagdocs : sequence	indicates that the constructs referenced by its children form a sequence
+tagdocs : alternate	子要素らが参照している複数の構造が交換可能であることを示す．
+tagdocs : constraint	the formal rules of a constraint
+tagdocs : constraintSpec	contains a formal constraint, typically expressed in a rule-based schema language, to which a construct must conform in order to be considered valid
+tagdocs : attList	当該要素に関する全ての属性に関する文書を，一連の要素attDefで示す．
+tagdocs : attDef	1つの属性の定義を示す．
+tagdocs : attRef	1つまたは複数の属性の定義の場所を示す．
+tagdocs : datatype	属性値の型を，当該スキーマ中のデータ型を参照して示す．
+tagdocs : dataRef	identifies the datatype of an attribute value, either by referencing an item in an externally defined datatype library, or by pointing to a TEI-defined data specification
+tagdocs : dataFacet	Restricts the value of the strings used to represent values of a datatype, according to XML Schemas: Part 2: Datatypes.
+tagdocs : defaultVal	属性の既定値を示す．
+tagdocs : valDesc	要素datatypeにある情報に加えて，属性値の意味的・統語的制約を示す．
+tagdocs : valItem	属性値のひとつを解説する．
+tagdocs : valList	可能な属性値を表すひとつ以上の要素valItemを示す．
+tagdocs : textNode	indicates the presence of a text node in a content model
+tagdocs : anyElement	コンテンツモデル内のあらゆる要素の存在を示す．
+tagdocs : empty	indicates the presence of an empty node within a content model

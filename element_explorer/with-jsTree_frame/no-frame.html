@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>TEI 要素ツリー</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+</head>
+<body>
+<div id="tree-container"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+<script>
+$(function () {
+    $.getJSON("elements.json", function(elements) {
+        $('#tree-container').jstree({
+            "core" : {
+                "check_callback": true,
+                "expand_selected_onload" : false,
+                "multiple": false,
+                "themes": {
+                    "icons": false,
+                    "variant": "large",
+                    "responsive": true
+                },
+                "data" : {
+                    "url" : function (node) {
+                        return 'root-no-frame.json';
+                    }
+                }
+            }
+        });
+        var no_link = ["ANY", "Character data only", "Empty element", "character data"];
+        var jstree = $('#tree-container').jstree(true);
+        $('#tree-container').on("select_node.jstree", function (e, data) {
+            if (no_link.indexOf(data.node.text) >= 0) {
+                return null;
+            }
+            var link = data.instance.get_node(data.node, true).children('a').attr('href');
+            window.open(link, '_blank');
+        });
+        $('#tree-container').on("before_open.jstree", function (e, data) {
+            data.node.children.forEach(function(id) {
+                var child = jstree.get_node(id, null);
+                if (child.children.length == 0 && elements[child.text].children.length > 0) {
+                    elements[child.text].children.forEach(function(grandchild) {
+                        if (no_link.indexOf(grandchild.name) >= 0) {
+                            jstree.create_node(
+                                child, 
+                                {
+                                    "text": grandchild.name
+                                });
+                        }
+                        else {
+                            jstree.create_node(
+                                child, 
+                                {
+                                    "text": grandchild.name,
+                                    "a_attr": {
+                                        "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-" + grandchild.name + ".html",
+                                        "target": "_blank",
+                                        "title": elements[grandchild.name].desc
+                                    }
+                                });
+                        }
+                    });
+                }
+            });
+        });
+    });
+});
+</script>
+</body>
+</html>

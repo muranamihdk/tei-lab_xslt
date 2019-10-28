@@ -1,0 +1,18 @@
+[
+    {
+        "id": "TEI",
+        "text": "TEI",
+        "children": [
+            {
+                "id": "teiHeader",
+                "text": "teiHeader",
+                "children": true
+            },
+            {
+                "id": "text",
+                "text": "text",
+                "children": true
+            }
+        ]
+    }
+]

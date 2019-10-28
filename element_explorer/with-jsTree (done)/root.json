@@ -1,0 +1,52 @@
+[
+    {
+        "text": "TEI",
+        "a_attr": {
+            "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-TEI.html",
+            "target": "_blank",
+            "title": "一つ以上のmodel.resourceLikeクラスを持つ一つのTEIヘッダを持つ，単一のTEI準拠文書を含む．teiCorpusエレメントには複数のTEI要素が含まれてもよい．"
+        },
+        "children": [
+            {
+                "text": "teiHeader",
+                "a_attr": {
+                    "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-teiHeader.html",
+                    "target": "_blank",
+                    "title": "全てのTEI準拠テキストが伴う，電子版のタイトルページを構成する，記述 的・宣言的情報を示す．"
+                }
+            },
+            {
+                "text": "sourceDoc",
+                "a_attr": {
+                    "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-sourceDoc.html",
+                    "target": "_blank",
+                    "title": "contains a transcription or other representation of a single source document potentially forming part of a dossier génétique or collection of sources."
+                }
+            },
+            {
+                "text": "facsimile",
+                "a_attr": {
+                    "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-facsimile.html",
+                    "target": "_blank",
+                    "title": "転記または符号化されたテキストではなく，画像データ中にある，書記資料の 表現を示す．"
+                }
+            },
+            {
+                "text": "text",
+                "a_attr": {
+                    "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-text.html",
+                    "target": "_blank",
+                    "title": "ひとつのテキストを示す．単体でも複合体でもよい．例えば，詩，舞台芸術， 随筆，小説，辞書，コーパスなど．"
+                }
+            },
+            {
+                "text": "fsdDecl",
+                "a_attr": {
+                    "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-fsdDecl.html",
+                    "target": "_blank",
+                    "title": "ひとつ以上の素性構造宣言または素性構造宣言へのリンクを含む，素性シス テム宣言を示す．"
+                }
+            }
+        ]
+    }
+]
