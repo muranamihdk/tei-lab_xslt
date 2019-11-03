@@ -80,7 +80,7 @@
 <xsl:template match="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition">
   <xsl:text>Generated from ODD files of the Guidelines version </xsl:text> 
   <xsl:value-of select="tei:ref[2]" />
-  <xsl:text>, last updated on </xsl:text>
+  <xsl:text> updated on </xsl:text>
   <xsl:value-of select="tei:date" />
   <xsl:text> as revision </xsl:text>
   <xsl:value-of select="tei:ref[3]" />
