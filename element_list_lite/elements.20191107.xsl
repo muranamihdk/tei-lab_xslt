@@ -36,27 +36,12 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>P5: TEIガイドライン要素・属性一覧</title>
-    <style type="text/css">
-    table {
-        border-collapse: collapse;
-        border: 2px solid;
-    }
-    th, td {
-        border: 1px solid;
-        padding: 6px;
-    }
-    .td-border-right-none {
-        border-right-style:none;
-    }
-    .td-border-left-none {
-        border-left-style:none;
-    }
-    </style>
+    <title>TEI Lite 要素・属性一覧</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   </head>
   
   <body>
-    <h1>P5: TEIガイドラインで定義されている要素と属性の一覧</h1>
+    <h1>TEI Lite 要素・属性一覧</h1>
       <p>
         <small>
         <xsl:apply-templates select="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition" />
@@ -65,10 +50,10 @@
       <p>このページはTEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" /> 個の要素と <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/> 個の属性を，ガイドラインに沿ってモジュール別に列挙したものである．</p>
       
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="#module_list">モジュール一覧</a></li>
-        <li class="list-inline-item"><a href="#elements_list">要素一覧</a></li>
-        <li class="list-inline-item"><a href="#attribute-classes-list">属性クラス一覧</a></li>
-        <li class="list-inline-item"><a href="#alphabetical-index">アルファベット順要素インデックス</a></li>
+        <li class="list-inline-item">||　<a href="#module_list">モジュール一覧</a>　|</li>
+        <li class="list-inline-item"><a href="#elements_list">要素一覧</a>　|</li>
+        <li class="list-inline-item"><a href="#attribute-classes-list">属性クラス一覧</a>　|</li>
+        <li class="list-inline-item"><a href="#alphabetical-index">アルファベット順要素インデックス</a>　||</li>
       </ul>
 
     <h2 id="module_list">モジュール一覧</h2>
@@ -105,7 +90,7 @@
 
 <!-- モジュール一覧 -->
 <xsl:template name="list-for-modules">
-<table>
+<table class="table">
   <tr>
     <th>モジュール名</th>
     <!--<th>Formal public identifier</th>-->
@@ -193,7 +178,7 @@
 
 <!-- 要素一覧 -->
 <xsl:template name="list-of-elements">
-<table>
+<table class="table">
   <tr>
     <th colspan="2" class="td-border-right-none">要素名</th>
     <th>用途</th>
@@ -215,7 +200,7 @@
 <xsl:template name="get-element-specs">
   <!-- Get element specs grouped with module -->
   <xsl:param name="module_name" />
-  <xsl:for-each select="//tei:elementSpec[@module=$module_name]">
+  <xsl:for-each select="//tei:elementSpec[@module=$module_name and @ident=$tei-lite-doc/rng:grammar/rng:define/rng:element/@name]">
         <xsl:apply-templates select="." mode="toc-for-element" />
   </xsl:for-each>
 </xsl:template>
@@ -223,15 +208,14 @@
 <xsl:template match="tei:elementSpec" mode="toc-for-element">
 <xsl:variable name="element_name" select="@ident" />
 <xsl:variable name="module_name" select="@module" />
+<!-- TEI Lite に含まれるか -->
+<!--<xsl:if test="$tei-lite-doc/rng:grammar/rng:define/rng:element[@name=$element_name]">-->
 <tr>
-  <!-- TEI Lite に含まれるか -->
-  <td class="td-border-right-none">
-    <xsl:if test="$tei-lite-doc/rng:grammar/rng:define/rng:element[@name=$element_name]">
+  <td>
       <xsl:text>*</xsl:text>
-    </xsl:if>
   </td>
   <!-- 要素名 -->
-  <td class="td-border-left-none">
+  <td>
     <a>
     <xsl:attribute name="href">
       <xsl:text>https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/</xsl:text>
@@ -297,6 +281,7 @@
     <xsl:apply-templates select="tei:listRef" />
   </td>
 </tr>
+<!--</xsl:if>-->
 </xsl:template>
 
 <xsl:template match="/tei:TEI/tei:text/tei:body//tei:classes/tei:memberOf">
@@ -460,7 +445,7 @@
 
 <!-- 属性クラス一覧 -->
 <xsl:template name="list-of-attribute-class">
-<table>
+<table class="table">
   <tr>
     <th>属性クラス名</th>
     <th>このクラスの説明</th>
@@ -544,37 +529,33 @@
 <xsl:template name="alphabetical-index">
   <xsl:variable name="doc" select="/" />
   <xsl:variable name="alphabet" select="('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z')" />
-  <table>
   <xsl:for-each select="$alphabet">
   <xsl:variable name="index" select="." />
   <xsl:if test="$doc/tei:TEI/tei:text/tei:body//tei:elementSpec[starts-with(@ident, $index) or starts-with(@ident, lower-case($index))]">
-    <tr>
-    <td>
     <xsl:text> [</xsl:text>
     <xsl:value-of select="$index" />
     <xsl:text>] </xsl:text>
-    </td>
-    <td>
-    <xsl:apply-templates select="$doc/tei:TEI/tei:text/tei:body//tei:elementSpec[starts-with(@ident, $index) or starts-with(@ident, lower-case($index))]" mode="alphabetical-index">
+    <xsl:apply-templates select="$doc/tei:TEI/tei:text/tei:body//tei:elementSpec[(starts-with(@ident, $index) or starts-with(@ident, lower-case($index))) and @ident=$tei-lite-doc/rng:grammar/rng:define/rng:element/@name]" mode="alphabetical-index">
       <xsl:sort select="@ident" data-type="text" order="ascending"/>
     </xsl:apply-templates>
-    </td>
-    </tr>
   </xsl:if>
   </xsl:for-each>
-  </table>
 </xsl:template>
 
 <xsl:template match="/tei:TEI/tei:text/tei:body//tei:elementSpec" mode="alphabetical-index">
+  <xsl:variable name="element_name" select="@ident" />
   <xsl:for-each select=".">
+    <!-- TEI Lite に含まれるか -->
+    <!--<xsl:if test="$tei-lite-doc/rng:grammar/rng:define/rng:element[@name=$element_name]">-->
     <a>
     <xsl:attribute name="href">
       <xsl:text>#</xsl:text>
       <xsl:value-of select="@ident" />
     </xsl:attribute>
     <xsl:value-of select="@ident" />
+    <xsl:text > </xsl:text>
     </a>
-    <xsl:text >  </xsl:text>
+    <!--</xsl:if>-->
   </xsl:for-each>
 </xsl:template>
 
