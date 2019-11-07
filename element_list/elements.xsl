@@ -57,7 +57,7 @@
   
   <body>
     <h1>P5: TEIガイドラインで定義されている要素と属性の一覧</h1>
-      <p>このページは， TEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" /> 個の要素と <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/> 個の属性を，通覧できるようにしたものである．要素はガイドラインに沿ってモジュール順に列挙し，属性は属性クラス別に列挙している．末尾に属性名による索引を付した．このページはガイドラインのリファレンスのODDソースファイルから， XSLTスタイルシートにより機械的に生成されたものである．</p>
+      <p>このページは，TEIガイドラインで定義されている<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" />個の要素と<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/>個の属性を通覧できるようにしたものである。要素はガイドラインに沿ってモジュール順に列挙した。属性は属性クラス別に列挙した。末尾に属性名による索引を付している。このページはガイドラインのリファレンスのODDソースファイルからXSLTスタイルシートにより機械的に生成されたものである。</p>
       
       <ul class="list-inline">
         <li class="list-inline-item"><a href="#module_list">モジュール一覧</a></li>
@@ -73,12 +73,12 @@
 
     <hr />
     <h2 id="elements_list">要素一覧</h2>
-      <p> * 印はその要素が <a href="https://tei-c.org/guidelines/customization/Lite/">TEI Lite</a> サブセット <xsl:value-of select="count($tei-lite-doc/rng:grammar/rng:define/rng:element)" /> 個中に含まれる基本的な要素であることを示す．</p>
+      <p> * 印はその要素が <a href="https://tei-c.org/guidelines/customization/Lite/">TEI Lite</a> サブセット <xsl:value-of select="count($tei-lite-doc/rng:grammar/rng:define/rng:element)" /> 個中に含まれる基本的な要素であることを示す。</p>
       <xsl:call-template name="list-of-elements" />
 
     <hr />
     <h2 id="attribute-classes-list">属性クラス一覧</h2>
-      <p>属性クラスは複数の属性をグループ化する．これによりある要素で使用可能な複数の属性を一括して指定することができる．</p>
+      <p>属性クラスは複数の属性をグループ化する。これによりある要素で使用可能な複数の属性を，一括して指定することができる。</p>
       <xsl:call-template name="list-of-attribute-class" />
 
     <hr />
@@ -100,13 +100,13 @@
 
 <!-- バージョン表示 -->
 <xsl:template match="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition">
-  <xsl:text>Generated from ODD files of the Guidelines version </xsl:text> 
+  <xsl:text>Generated from ODD files of the Guideline version </xsl:text> 
   <xsl:value-of select="tei:ref[2]" />
   <xsl:text> updated on </xsl:text>
   <xsl:value-of select="tei:date" />
   <xsl:text> as revision </xsl:text>
   <xsl:value-of select="tei:ref[3]" />
-  <xsl:text>, and a TEI Lite RELAX NG schema file.</xsl:text>
+  <xsl:text> and a TEI Lite RELAX NG schema file.</xsl:text>
 </xsl:template>
 
 
