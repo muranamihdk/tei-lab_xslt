@@ -57,7 +57,7 @@
   
   <body>
     <h1>P5: TEIガイドラインで定義されている要素と属性の一覧</h1>
-      <p>このページはTEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" /> 個の要素と <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/> 個の属性を，ガイドラインに沿ってモジュール別に列挙したものである．</p>
+      <p>このページはTEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" /> 個の要素と <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/> 個の属性を一覧できるようにしたものである．要素はガイドラインに沿ってモジュール別に列挙し，属性は属性クラス別に列挙している．末尾に属性名による索引を付した．このページはガイドラインのODDファイルからXSLTスタイルシートにより機械的に生成されたものである．</p>
       
       <ul class="list-inline">
         <li class="list-inline-item"><a href="#module_list">モジュール一覧</a></li>
@@ -78,7 +78,7 @@
 
     <hr />
     <h2 id="attribute-classes-list">属性クラス一覧</h2>
-      <p>属性クラスは複数の属性をグループ化する．ある要素で使用可能な属性は属性クラスでも指定することができる．</p>
+      <p>属性クラスは複数の属性をグループ化する．これによりある要素で使用可能な複数の属性を一括して指定することができる．</p>
       <xsl:call-template name="list-of-attribute-class" />
 
     <hr />
