@@ -57,13 +57,8 @@
   
   <body>
     <h1>TEI Lite 要素・属性一覧</h1>
-      <p>
-        <small>
-        <xsl:apply-templates select="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition" />
-        </small>
-      </p>
       <p>このページはTEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" /> 個の要素と <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/> 個の属性を，ガイドラインに沿ってモジュール別に列挙したものである．</p>
-      <p>このページでは要素は TEI Lite に採用されたもののみを列挙している。</p>
+      <p>ここでは要素は TEI Lite に採用されたもののみを列挙している。</p>
       
       <ul class="list-inline">
         <li class="list-inline-item"><a href="#module_list">モジュール一覧</a></li>
@@ -72,20 +67,32 @@
         <li class="list-inline-item"><a href="#alphabetical-index">アルファベット順要素インデックス</a></li>
       </ul>
 
+    <hr />
     <h2 id="module_list">モジュール一覧</h2>
       <p>TEIガイドラインのすべての要素は，その用途や使用分野に応じ，以下のモジュールのいずれかに分類されている．</p>
       <xsl:call-template name="list-for-modules" />
 
+    <hr />
     <h2 id="elements_list">要素一覧</h2>
       <p> * 印はその要素が <a href="https://tei-c.org/guidelines/customization/Lite/">TEI Lite</a> サブセット <xsl:value-of select="count($tei-lite-doc/rng:grammar/rng:define/rng:element)" /> 個中に含まれる基本的な要素であることを示す．</p>
       <xsl:call-template name="list-of-elements" />
+
+    <hr />
     <h2 id="attribute-classes-list">属性クラス一覧</h2>
       <p>属性クラスは複数の属性をグループ化する．ある要素で使用可能な属性は属性クラスでも指定することができる．</p>
       <xsl:call-template name="list-of-attribute-class" />
 
+    <hr />
     <h2 id="alphabetical-index">アルファベット順要素インデックス</h2>
       <p>
         <xsl:call-template name="alphabetical-index" />
+      </p>
+
+      <hr />
+      <p>
+        <small>
+        <xsl:apply-templates select="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition" />
+        </small>
       </p>
   </body>
 </html>
