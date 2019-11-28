@@ -36,7 +36,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>P5: TEIガイドライン要素・属性一覧</title>
+    <title>P5: TEIガイドライン モジュール・要素・属性クラス一覧</title>
     <style type="text/css">
     table {
         border-collapse: collapse;
@@ -56,7 +56,7 @@
   </head>
   
   <body>
-    <h1>P5: TEIガイドラインで定義されている要素と属性の一覧</h1>
+    <h1>P5: TEIガイドラインで定義されているモジュールと要素と属性クラスの一覧</h1>
       <p>このページは，TEIガイドラインで定義されている<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" />個の要素と<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/>個の属性を通覧できるようにしたものである。要素はガイドラインに沿ってモジュール順に列挙した。属性は属性クラス別に列挙した。末尾に属性名による索引を付している。このページはガイドラインのリファレンスのODDソースファイルからXSLTスタイルシートにより機械的に生成されたものである。</p>
       
       <ul class="list-inline">
