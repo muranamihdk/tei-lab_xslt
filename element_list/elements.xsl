@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet version="2.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rng="http://relaxng.org/ns/structure/1.0"
     xmlns:tei="http://www.tei-c.org/ns/1.0">
 <!--exclude-result-prefixes="tei" >-->
@@ -36,7 +37,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>P5: TEIガイドライン モジュール・要素・属性クラス一覧</title>
+    <title>TEIガイドライン定義モジュール・要素・属性クラス一覧</title>
     <style type="text/css">
     table {
         border-collapse: collapse;
@@ -56,8 +57,8 @@
   </head>
   
   <body>
-    <h1>P5: TEIガイドラインで定義されているモジュールと要素と属性クラスの一覧</h1>
-      <p>このページは，TEIガイドラインで定義されている<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" />個の要素と<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/>個の属性を通覧できるようにしたものである。要素はガイドラインに沿ってモジュール順に列挙した。属性は属性クラス別に列挙した。末尾に属性名による索引を付している。このページはガイドラインのリファレンスのODDソースファイルからXSLTスタイルシートにより機械的に生成されたものである。</p>
+    <h1>TEIガイドライン定義モジュール・要素・属性クラス一覧</h1>
+      <p>このページは，TEIガイドラインで定義されている<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" />個の要素と<xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/>個の属性を通覧できるようにしたものである。要素はガイドラインに沿ってモジュール順に列挙した。属性は属性クラス別に列挙した。末尾に属性名による索引を付している。このページはガイドラインの付録リファレンスのODDファイルからXSLTスタイルシートにより機械的に生成されたものである。</p>
       
       <ul class="list-inline">
         <li class="list-inline-item"><a href="#module_list">モジュール一覧</a></li>
@@ -98,15 +99,21 @@
 </xsl:template>
 
 
-<!-- バージョン表示 -->
+<!-- ガイドラインバージョン・生成日付表示 -->
 <xsl:template match="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition">
-  <xsl:text>Generated from ODD files of the Guideline version </xsl:text> 
+  <xsl:text>Generated from the TEI Guidelines version </xsl:text> 
   <xsl:value-of select="tei:ref[2]" />
-  <xsl:text> updated on </xsl:text>
-  <xsl:value-of select="tei:date" />
-  <xsl:text> as revision </xsl:text>
+  <xsl:text>, revision </xsl:text>
   <xsl:value-of select="tei:ref[3]" />
-  <xsl:text> and a TEI Lite RELAX NG schema file.</xsl:text>
+  <xsl:text>, last updated on </xsl:text>
+  <xsl:value-of select="tei:date" />
+  <xsl:text>. </xsl:text>
+  <xsl:text>This page generated at </xsl:text>
+  <xsl:variable name="currentDateTime" as="xs:dateTime" 
+      select="current-dateTime()"/>
+  <xsl:variable name="jst" select="adjust-dateTime-to-timezone($currentDateTime, xs:dayTimeDuration('PT9H'))" />
+  <xsl:value-of select="format-dateTime($jst,'[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]')" />
+  <xsl:text>.</xsl:text>
 </xsl:template>
 
 
