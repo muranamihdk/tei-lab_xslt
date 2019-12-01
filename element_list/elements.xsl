@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet version="2.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rng="http://relaxng.org/ns/structure/1.0"
     xmlns:tei="http://www.tei-c.org/ns/1.0">
 <!--exclude-result-prefixes="tei" >-->
@@ -99,7 +98,7 @@
 </xsl:template>
 
 
-<!-- ガイドラインバージョン・生成日付表示 -->
+<!-- ガイドラインバージョン及び生成日付表示 -->
 <xsl:template match="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition">
   <xsl:text>Generated from the TEI Guidelines version </xsl:text> 
   <xsl:value-of select="tei:ref[2]" />
@@ -109,10 +108,7 @@
   <xsl:value-of select="tei:date" />
   <xsl:text>. </xsl:text>
   <xsl:text>This page generated at </xsl:text>
-  <xsl:variable name="currentDateTime" as="xs:dateTime" 
-      select="current-dateTime()"/>
-  <xsl:variable name="jst" select="adjust-dateTime-to-timezone($currentDateTime, xs:dayTimeDuration('PT9H'))" />
-  <xsl:value-of select="format-dateTime($jst,'[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]')" />
+  <xsl:value-of select="format-dateTime(current-dateTime(),'[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]')" />
   <xsl:text>.</xsl:text>
 </xsl:template>
 
