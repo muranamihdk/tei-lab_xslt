@@ -100,7 +100,7 @@
 
 <!-- ガイドラインバージョン及び生成日付表示 -->
 <xsl:template match="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:editionStmt/tei:edition">
-  <xsl:text>Generated from the TEI Guidelines version </xsl:text> 
+  <xsl:text>Generated from the TEI Guidelines P5 version </xsl:text> 
   <xsl:value-of select="tei:ref[2]" />
   <xsl:text>, revision </xsl:text>
   <xsl:value-of select="tei:ref[3]" />
