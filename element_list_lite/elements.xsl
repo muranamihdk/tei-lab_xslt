@@ -36,7 +36,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TEI Lite 要素・属性一覧</title>
+    <title>TEI Lite 要素一覧（付・TEIガイドライン定義モジュール・属性一覧）</title>
     <style type="text/css">
     table {
         border-collapse: collapse;
@@ -56,20 +56,19 @@
   </head>
   
   <body>
-    <h1>TEI Lite 要素・属性一覧</h1>
-      <p>このページはTEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" /> 個の要素と <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/> 個の属性を，ガイドラインに沿ってモジュール別に列挙したものである．</p>
-      <p>ここでは要素は TEI Lite に採用されたもののみを列挙している。</p>
+    <h1>TEI Lite 要素一覧（付・TEIガイドライン定義モジュール・属性一覧）</h1>
+      <p>このページはTEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:elementSpec/@ident))" /> 個の要素のうち，TEI Lite に採用された <xsl:value-of select="count($tei-lite-doc/rng:grammar/rng:define/rng:element)" /> 個の要素を通覧できるようにしたものである．<a href="https://tei-c.org/guidelines/customization/Lite/">TEI Lite</a> はTEIガイドラインのサブセットで、「90％のTEIユーザコミュニティの，90%のニーズに適合する」ことを意図して策定されたものである．要素はガイドラインの記述に沿ってモジュール別に列挙した．末尾に要素名による索引を付している．<br/>またこのページには，TEIガイドラインで定義されている <xsl:value-of select="count(distinct-values(/tei:TEI/tei:text/tei:body//tei:attDef/@ident))"/> 個の属性の一覧も付している．属性は属性クラス別に列挙した．なおこのページはガイドラインの付録リファレンスのODDファイルからXSLTスタイルシートにより機械的に生成されたものである．</p>
       
       <ul class="list-inline">
         <li class="list-inline-item"><a href="#module_list">モジュール一覧</a></li>
         <li class="list-inline-item"><a href="#elements_list">要素一覧</a></li>
-        <li class="list-inline-item"><a href="#attribute-classes-list">属性クラス一覧</a></li>
-        <li class="list-inline-item"><a href="#alphabetical-index">アルファベット順要素インデックス</a></li>
+        <li class="list-inline-item"><a href="#attribute-classes-list">属性一覧</a></li>
+        <li class="list-inline-item"><a href="#alphabetical-index">要素名索引</a></li>
       </ul>
 
     <hr />
     <h2 id="module_list">モジュール一覧</h2>
-      <p>TEIガイドラインのすべての要素は，その用途や使用分野に応じ，以下のモジュールのいずれかに分類されている．</p>
+      <p>TEIガイドラインのすべての要素は，その用途や使用分野に応じ，以下のモジュールのいずれかに分類されている．モジュール名をクリックすると，要素一覧中の当該モジュールグループの先頭に移動する．</p>
       <xsl:call-template name="list-for-modules" />
 
     <hr />
@@ -78,12 +77,12 @@
       <xsl:call-template name="list-of-elements" />
 
     <hr />
-    <h2 id="attribute-classes-list">属性クラス一覧</h2>
-      <p>属性クラスは複数の属性をグループ化する．ある要素で使用可能な属性は属性クラスでも指定することができる．</p>
+    <h2 id="attribute-classes-list">属性一覧</h2>
+      <p>属性クラスは複数の属性を，その用途や性格によりグループ化したものである．属性クラスを使うことにより，ある要素で使用可能な複数の属性を，一括して指定することができる．</p>
       <xsl:call-template name="list-of-attribute-class" />
 
     <hr />
-    <h2 id="alphabetical-index">アルファベット順要素インデックス</h2>
+    <h2 id="alphabetical-index">要素名索引</h2>
       <p>
         <xsl:call-template name="alphabetical-index" />
       </p>
