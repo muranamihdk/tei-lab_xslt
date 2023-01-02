@@ -4,7 +4,7 @@
         "a_attr": {
             "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-TEI.html",
             "target": "_blank",
-            "title": "一つ以上のmodel.resourceクラスを持つ一つのTEIヘッダを持つ、単一のTEI準拠文書を含む。teiCorpusエレメントには複数のTEI要素が含まれてもよい。"
+            "title": "一つ以上のmodel.resourceLikeクラスを持つ一つのTEIヘッダを持つ，単一のTEI準拠文書を含む．teiCorpusエレメントには複数のTEI要素が含まれてもよい．"
         },
         "children": [
             {
@@ -12,7 +12,7 @@
                 "a_attr": {
                     "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-teiHeader.html",
                     "target": "_blank",
-                    "title": "全てのTEI準拠テキストが伴う、電子版のタイトルページを構成する、記述的・宣言的情報を示す。"
+                    "title": "全てのTEI準拠テキストが伴う，電子版のタイトルページを構成する，記述 的・宣言的情報を示す．"
                 }
             },
             {
@@ -28,7 +28,7 @@
                 "a_attr": {
                     "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-facsimile.html",
                     "target": "_blank",
-                    "title": "転記または符号化されたテキストではなく、画像データ中にある、書記資料の表現を示す。"
+                    "title": "転記または符号化されたテキストではなく，画像データ中にある，書記資料の 表現を示す．"
                 }
             },
             {
@@ -36,7 +36,7 @@
                 "a_attr": {
                     "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-text.html",
                     "target": "_blank",
-                    "title": "ひとつのテキストを示す。単体でも複合体でもよい。例えば、詩、舞台芸術、 随筆、小説、辞書、コーパスなど。"
+                    "title": "ひとつのテキストを示す．単体でも複合体でもよい．例えば，詩，舞台芸術， 随筆，小説，辞書，コーパスなど．"
                 }
             },
             {
@@ -44,7 +44,7 @@
                 "a_attr": {
                     "href": "https://www.tei-c.org/release/doc/tei-p5-doc/ja/html/ref-fsdDecl.html",
                     "target": "_blank",
-                    "title": "ひとつ以上の素性構造宣言または素性構造宣言へのリンクを含む、素性システム宣言を示す。"
+                    "title": "ひとつ以上の素性構造宣言または素性構造宣言へのリンクを含む，素性シス テム宣言を示す．"
                 }
             }
         ]
