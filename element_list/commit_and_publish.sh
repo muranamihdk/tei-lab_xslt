@@ -1,9 +1,9 @@
 cd `dirname $0`
 git add .
-git commit -m "modified elememt list xslt and regenerate html"
+git commit -m "modified elements list xslt and regenerate html"
 git push
-cp index.html /Users/earth/Dropbox/TEI/tei-lab/tei-lab.github.io/element_list/
-cd /Users/earth/Dropbox/TEI/tei-lab/tei-lab.github.io/element_list
+cp index.html /Users/earth/Dropbox/TEI/repository/muranamihdk/tei-elements-list/
+cd /Users/earth/Dropbox/TEI/repository/muranamihdk/tei-elements-list
 git add .
-git commit -m "modified elememt list html"
+git commit -m "modified elements list html"
 git push
