@@ -263,18 +263,20 @@
   <xsl:choose>
     <xsl:when test="tei:desc[@xml:lang='ja']">
       <xsl:value-of select="translate(normalize-space(tei:desc[@xml:lang='ja']), '&#32;', '')" />
+      <!-- gloss の日本語訳がされている場合は付加 -->
+      <xsl:if test="tei:gloss[@xml:lang='ja']/text()">
+        <xsl:text> (</xsl:text>
+          <xsl:value-of select="tei:gloss[@xml:lang='ja']" />
+        <xsl:text>)</xsl:text>
+      </xsl:if>
+      <br/>
+      <xsl:value-of select="normalize-space(tei:desc[@xml:lang='en'])" />
     </xsl:when>
     <xsl:otherwise>
       <xsl:value-of select="normalize-space(tei:desc[@xml:lang='en'])" />
     </xsl:otherwise>
   </xsl:choose>
   <!-- 上位要素が一つのみの場合は注記 -->
-  <!-- gloss の日本語訳がされている場合は付加 -->
-  <xsl:if test="tei:gloss[@xml:lang='ja']/text()">
-    <xsl:text> (</xsl:text>
-      <xsl:value-of select="tei:gloss[@xml:lang='ja']" />
-    <xsl:text>)</xsl:text>
-  </xsl:if>
   </td>
   <!-- 使用可能な属性クラスと属性 -->
   <td>
